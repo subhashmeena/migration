@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  liftandshift.productservice:
+    ports:
+      - "80"
+  liftandshiftmvcapp.web:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat
+

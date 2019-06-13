@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LiftAndShift.ProductService.ProductManagement" CodeBehind="ProductManagement.svc.cs" %>

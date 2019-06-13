@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  liftandshift.productservice:
+    image: ${DOCKER_REGISTRY-}liftandshiftproductservice
+    build:
+      context: .\LiftAndShift.ProductService
+      dockerfile: Dockerfile
+
+  liftandshiftmvcapp.web:
+    image: ${DOCKER_REGISTRY-}liftandshiftmvcappweb
+    build:
+      context: .\LiftAndShiftMvcApp.Web
+      dockerfile: Dockerfile
+

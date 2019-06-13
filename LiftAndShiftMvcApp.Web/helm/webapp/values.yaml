@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: laxmikantk/webapp:latest
+  pullPolicy: Always
+
+
+service:
+  type: LoadBalancer
+  port: 80
+
+resources: {}
+

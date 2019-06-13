@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: laxmikantk/wcfservice:latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources: {}

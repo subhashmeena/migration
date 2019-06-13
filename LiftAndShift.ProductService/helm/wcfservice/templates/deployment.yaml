@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wcfservice
+  labels:
+    app: wcfservice
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: wcfservice
+  template:
+    metadata:
+      labels:
+        app: wcfservice
+    spec:
+      containers:
+      - name: wcfservice
+        image: {{ .Values.image.repository }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+        - containerPort: 80
+          name: wcfservice-port
