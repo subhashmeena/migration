@@ -1,6 +1,7 @@
 def label = "slave-${UUID.randomUUID().toString()}"
 def jenkins_base = env.JENKINS_URL
 
+
 podTemplate(label: label, containers: [
 containerTemplate(name: 'jnlp', image: 'laxmikantk/baseimage:docker', args:'http://jenkins:8080/computer/${computer.name}/slave-agent.jnlp',
   )],
