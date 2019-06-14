@@ -22,6 +22,7 @@ containerTemplate(name: 'jnlp', image: 'laxmikantk/baseimage:docker', args:'http
         bat 'msbuild /Target:build /p:Configuration=Release LiftAndShiftWcfApp.sln'
     }
     
+    
     stage('Pulishing webapp') {
         dir('LiftAndShiftMvcApp.Web') {
             bat 'echo "Publishing the mvc web application"'
