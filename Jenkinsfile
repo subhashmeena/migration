@@ -5,11 +5,7 @@ podTemplate(label: label, containers: [
 containerTemplate(name: 'jnlp', image: 'laxmikantk/baseimage:docker', args:'http://jenkins:8080/computer/${computer.name}/slave-agent.jnlp',
   )],
   podRetention:onFailure(),
-  slaveConnectTimeout: '6000',
-   resourceRequestCpu: '5000m',
-        resourceLimitCpu: '10000m',
-        resourceRequestMemory: '2024Mi',
-        resourceLimitMemory: '10000Mi',
+  slaveConnectTimeout: '6000'
   ) {
 
   node(label) {
