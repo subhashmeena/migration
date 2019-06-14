@@ -11,7 +11,7 @@ containerTemplate(name: 'jnlp', image: 'laxmikantk/baseimage:docker', args:'http
 
   node(label) {
     stage('Pull the source code') {
-         git url: 'https://github.com/subhashmeena/migration.git', credentialsId: 'GitCredentials'
+         git url: 'https://github.com/subhashmeena/migration-backup.git', credentialsId: 'GitCredentials'
     }
     
     stage('Building the solution') {
