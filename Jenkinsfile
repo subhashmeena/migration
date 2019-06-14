@@ -29,7 +29,7 @@ containerTemplate(name: 'jnlp', image: 'laxmikantk/baseimage:docker', args:'http
         
     }
     
-    stage('Publishing the wcf service') {
+    stage('Publishing the wcf service')  {
         dir('LiftAndShift.ProductService') {
             bat 'echo "Publishing the wcf service"'
             bat 'msbuild /Target:package /p:Configuration=Release /p:AutoParameterizationWebConfigConnectionStrings=False'
